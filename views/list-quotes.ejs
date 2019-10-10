@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/header %>
+
+</head>
+
+<body>
+    <% include partials/layout %>
+    <div class="container">
+        <% include partials/title %>
+        <div class="row">
+            <div class="offset-lg-2 col-lg-8">
+                <table class="table table table-hover table-striped">
+                    <tr>
+                        <th>Author Name</th>
+                        <th>Quote Name</th>
+                        <th>Action</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <% for(let quote of quotes){%>
+                        <td><%=quote.authorName %></td>
+                        <td><%=quote.quoteName %></td>
+                        <td>
+                            <a class="btn btn-warning" href="/search-quote/<%=quote._id%>">Edit</a>
+                        </td>
+                        <td>
+                            <form method='post' action='/delete-quote/<%=quote._id%>'>
+                                <button class="btn btn-danger" type='submit'
+                                    onclick="return confirm('Are you sure want to delete')">Delete</button>
+                                &nbsp;&nbsp;
+                            </form>
+                        </td>
+                    </tr>
+                    <%}%>
+                <% if (!status){%>
+                    <tr>
+                        <td colspan="3">
+                            <p class="lead text-danger text-center">
+                                <b>NO QUOTES AVAILABLE</b>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <%}%>
+        <a class="btn btn-link" href="/">Add Quote</a> 
+    </div>
+</body>
+    </html>

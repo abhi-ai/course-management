@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <% include partials/header %>
+    
+</head>
+
+<body>
+        <% include partials/layout %>
+        <div class="container">
+            <% include partials/title %>
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="images/logo.png" width="150%" />
+                </div>
+                <div class="offset-lg-1 col-lg-8">
+                    <h2 class="text-warning">Fill your quotes details</h2>
+                    <br>
+                    <form method="POST" , action="/quotes">
+                        <div class="row form-group">
+                            <label for="authorName" ,class="col-lg-3">Author Name:</label>
+                            <div class="col-lg-5">
+                                <input type="text" class="form-control" placeholder="Author Name" name="authorName" required />
+                            </div>
+                        </div>
+        
+                        <div class="row form-group">
+                            <label for="quoteName" , class="col-lg-3">Quote Name:</label>
+                            <div class="col-lg-5">
+                                <input type="text" class="form-control" placeholder="Quote Name" name="quoteName" />
+                            </div>
+                        </div>
+        
+        
+                        <button class="btn btn-success">Submit Quote</button> &nbsp;
+                        <button class="btn btn-danger" type="reset">Clear</button>&nbsp;&nbsp;
+        
+                        <a class="btn btn-link" href="/list-quotes">Back to List</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+</body>
+
+</html>
+

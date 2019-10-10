@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+</head>
+<body>
+        <div class="container">
+        <div class="jumbotron">
+            <h2 class="text-center text-primary">
+                Welcome to EXPRESS CRUD App!!
+            </h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="images/logo.png" width="150%"/>
+            </div>
+            <div class="offset-lg-1 col-lg-8">
+                <form method="POST" action="/quotes">
+                    <div class="row form-group">
+                        <label for="authorName" class="col-lg-3">Author Name: </label>
+                        <div class="col-lg-5">
+                            <input type="text" 
+                            class="form-control" placeholder="Author Name"
+                            name="authorName"/>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                            <label for="quoteName" class="col-lg-3">Quote Name: </label>
+                            <div class="col-lg-5">
+                                <input type="text" 
+                                class="form-control" placeholder="Quote Name"
+                                name="quoteName"/>
+                            </div>
+                        </div>
+                        <button class="btn btn-success">
+                            Submit Quote
+                        </button>
+                </form>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>
